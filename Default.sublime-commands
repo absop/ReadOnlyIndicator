@@ -2,5 +2,13 @@
   {
     "caption": "ReadOnlyIndicator: Toggle Read Only",
     "command": "toggle_read_only"
+  },
+  {
+      "caption": "Preferences: ReadOnlyIndicator Settings",
+      "command": "edit_settings",
+      "args": {
+          "base_file": "${packages}/ReadOnlyIndicator/ReadOnlyIndicator.sublime-settings",
+          "default": "{\n\t$0\n}\n"
+      }
   }
 ]
