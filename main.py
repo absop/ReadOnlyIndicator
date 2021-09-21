@@ -19,7 +19,7 @@ class ReadOnlyIndicator(sublime_plugin.EventListener):
 class Indicator():
     status_key = '__read_only'
 
-    def __init__(self, settings_name='ReadonlyIndicator.sublime-settings'):
+    def __init__(self, settings_name='ReadOnlyIndicator.sublime-settings'):
         self.settings_name = settings_name
 
     def __getitem__(self, readonly: bool):
