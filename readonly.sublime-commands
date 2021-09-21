@@ -1,0 +1,6 @@
+[
+  {
+    "caption": "ReadOnlyIndicator: Toggle Read Only",
+    "command": "toggle_read_only"
+  }
+]
