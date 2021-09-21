@@ -35,8 +35,8 @@ class Indicator():
         self.update_read_only_status(settings)
 
     def load_emojis(self, settings):
-        self.readonly_emoji = settings.get('readonly_indicator') or '🔒'
-        self.editable_emoji = settings.get('editable_indicator') or '🔓'
+        self.readonly_emoji = settings.get('readonly_indicator', '🔒')
+        self.editable_emoji = settings.get('editable_indicator', '🔓')
 
     def update_read_only_status(self, settings):
         self.load_emojis(settings)
@@ -58,8 +58,8 @@ indicator = Indicator()
 
 
 def plugin_loaded():
-    indicator.start()
+    sublime.set_timeout_async(indicator.start, 0)
 
 
 def plugin_unloaded():
-    indicator.stop()
+    sublime.set_timeout_async(indicator.stop, 0)

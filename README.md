@@ -20,4 +20,4 @@ A plugin for Sublime Text to toggle the **read-only** mode of view, and indicate
 }
 ```
 
-You can change the `indicators` from emojis to plain strings.
+You can change the `indicators` from emojis to plain strings or empty strings.
