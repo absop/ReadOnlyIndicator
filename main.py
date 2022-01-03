@@ -11,6 +11,9 @@ class ToggleReadOnlyCommand(sublime_plugin.TextCommand):
 class ReadOnlyIndicator(sublime_plugin.EventListener):
     def on_new_async(self, view):
         indicator.show_read_only_status(view)
+        sublime.set_timeout_async(
+            lambda: indicator.show_read_only_status(view),
+            100)
 
     def on_load_async(self, view):
         indicator.show_read_only_status(view)
